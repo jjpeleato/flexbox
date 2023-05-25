@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB" prefix="og: https://ogp.me/ns#">
+<html lang="es-ES" prefix="og: https://ogp.me/ns#">
 	<head>
 		<!-- Assets -->
 		<meta charset="utf-8">
@@ -8,28 +8,28 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<!-- Title -->
-		<title>Slides starter boilerplate by @jjpeleato</title>
+		<title>Flexbox CSS by @jjpeleato</title>
 		<!-- Information -->
-		<meta name="description" content="Slides starter boilerplate by @jjpeleato">
+		<meta name="description" content="Presentación sobre flex-box la nueva propiedad de CSS3 by @jjpeleato">
 		<meta name="author" content="@jjpeleato">
 		<!-- Datetime -->
-		<meta name="content_origin" content="2023-05-03">
-		<meta name="content_updated" content="2023-05-03">
-		<meta name="minor_updates" content="2023-05-03">
+		<meta name="content_origin" content="2023-05-25">
+		<meta name="content_updated" content="2023-05-25">
+		<meta name="minor_updates" content="2023-05-25">
 		<!-- Social media -->
-		<meta property="og:locale" content="en_GB">
+		<meta property="og:locale" content="es_ES">
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="Slides starter boilerplate">
-		<meta property="og:title" content="Slides starter boilerplate">
-		<meta property="og:description" content="Slides starter boilerplate by @jjpeleato">
-		<meta property="og:url" content="https://example.com/">
-		<meta property="og:image" content="https://example.com/image-share.png">
+		<meta property="og:site_name" content="Flexbox CSS by @jjpeleato">
+		<meta property="og:title" content="Flexbox CSS by @jjpeleato">
+		<meta property="og:description" content="Presentación sobre flex-box la nueva propiedad de CSS3 by @jjpeleato">
+		<meta property="og:url" content="https://jjpeleato.com/courses/flex-box/">
+		<meta property="og:image" content="https://jjpeleato.com/courses/flex-box/image-share.png">
 		<meta name="twitter:card" content="summary">
-		<meta name="twitter:title" content="Slides starter boilerplate">
-		<meta name="twitter:description" content="Slides starter boilerplate by @jjpeleato">
+		<meta name="twitter:title" content="Flexbox CSS by @jjpeleato">
+		<meta name="twitter:description" content="Presentación sobre flex-box la nueva propiedad de CSS3 by @jjpeleato">
 		<meta name="twitter:site" content="@jjpeleato">
 		<meta name="twitter:creator" content="@jjpeleato">
-		<meta name="twitter:image" content="https://example.com/image-share.png">
+		<meta name="twitter:image" content="https://jjpeleato.com/courses/flex-box/image-share.png">
 		<!-- Geolocation -->
 		<meta name="geo.region" content="ES-AR">
 		<meta name="geo.placename" content="Huesca">
@@ -56,22 +56,245 @@
 				<!-- Workshop presentation -->
 				<section>
 					<section>
-						<h1>Slides starter boilerplate</h1>
-						<blockquote>"For any presentation"</blockquote>
-						<p><i class="fa-solid fa-link"></i> <a rel="nofollow" href="#" target="_blank" title="Short link">https://bit.ly/#</a></p>
+						<h2>Guía básica</h2>
+						<h1>Flexbox CSS</h1>
+						<blockquote>"Hasta el infinito... ¡y más allá!"</blockquote>
+						<p><i class="fa-solid fa-link"></i> <a rel="nofollow" href="https://bit.ly/3MT6lMu" target="_blank" title="Short link: Flexbox CSS">https://bit.ly/3MT6lMu</a></p>
 					</section>
 					<section>
-						<p class="h4">Hello and welcome!</p>
-						<p>My name is <strong>José J. Peleato Pradel</strong>.</p>
-						<p><small>by <a href="https://www.jjpeleato.com/" target="_blank" title="by JJPeleato">jjpeleato.com</a></small></p>
+						<p class="h4">¡Hola y bienvenid@s!</p>
+						<p>Mi nombre es <strong>José J. Peleato Pradel</strong>.</p>
+						<p><small>by <a href="https://www.jjpeleato.com/" target="_blank" title="By JJPeleato">jjpeleato.com</a></small></p>
 					</section>
+				</section>
+
+				<!-- What is Flexbox CSS? -->
+				<section>
+					<section>
+						<h2>¿Qué es Flexbox layout?</h2>
+					</section>
+					<section>
+						<p>En el pasado, en CSS se ha utilizado diferentes técnicas de trabajo en la ubicación de los elementos de una página, desde el posicionamiento (static, relative, fixed, abolute, etc), elementos en línea o en bloque (inline, inline-block, block) o los ultra conocidos y actualmente semi odiados: float.</p>
+					</section>
+					<section>
+						<p>Un sistema de creación de diseño difícil de adaptar a los objetivos y metas que nos exigen a nivel profesional hoy en día.</p>
+						<p>Desarrollos de aplicaciones de escritorio, dispositivos móviles, infinitas resoluciones, etc, necesitan de un paso más allá.</p>
+					</section>
+					<section>
+						<p>En los años 2000, el acceso a Internet a través de los dispositivos móviles tuvo un crecimiento exponencial y motivo en la comunidad el tener que trabajar con sistemas de diseños adaptables por la creciente variedad de resoluciones.</p>
+						<p>Pero, no es hasta partir de los años 2010, donde el uso de populares frameworks Web/JavaScript, como Bootstrap, inspiraron el comienzo de las especificaciones CSS Flex-box y Grid layout.</p>
+					</section>
+					<section>
+						<p>La propiedad <b>CSS flex-box layout</b> es un modelo de diseño web de CSS 3 actualmente en estado <a rel="nofollow" href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" title="Candidate recommendation (CR)">Candidate recommendation (CR)</a> por el consorcio W3C en las <a rel="nofollow" href="https://www.w3.org/Style/CSS/current-work" title="CSS Specifications">especificaciones CSS</a>.</p>
+						<p>Permite definir los elementos de una página para que se comporten de forma predecible cuando el diseño de la página se adapta a diferentes resoluciones.</p>
+					</section>
+					<section>
+						<p>Compatibilidad actual semi-total:</p>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/flex-box-compatibility.png" title="Flexbox compatibility" alt="Flexbox compatibility">
+						<p><a rel="nofollow" href="https://caniuse.com/#search=display%3A%20flex" target="_blank" title="Can I use flexbox">Can I use <b>display: flex</b>?</a></p>
+					</section>
+				</section>
+
+				<!-- The concept of Flexbox -->
+				<section>
+					<section>
+						<h2>El concepto de Flexbox</h2>
+					</section>
+					<section>
+						<p>Los elementos pueden ubicarse en cualquier dirección y pueden tener dimensiones flexibles para adaptarse al espacio visible.</p>
+						<p>Posicionar los elementos en diseños complejos puede hacerse de una forma sencilla, clara y con un código más limpio, ya que el orden de visualización es independiente al orden que estos tengan en el DOM.</p>
+					</section>
+					<section>
+						<p>El algoritmo del modelo de diseño de "Flex" no parte de niguna dirección predeterminada, al contrario de lo que ocurre con el modelo "block", que asume una disposición vertical de los elementos, o lo que pasa con el modelo "inline", que asume una disposición horizontal.</p>
+					</section>
+				</section>
+
+				<!-- Flexbox terms -->
+				<section>
+					<section>
+						<h2>Terminología de Flexbox</h2>
+					</section>
+					<section>
+						<h3>Diagrama</h3>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/flex-box-terms.png" title="Flexbox terms" alt="Flexbox terms">
+					</section>
+					<section>
+						<h3>Flex container</h3>
+						<p>Elemento padre que contiene todos los <b>flex items</b>. Usando la propiedad <b>display</b> el contenedor se puede definir como <b>flex</b> o <b>inline-flex</b></p>
+						<pre><code>.container { display: flex; }
+.inline-container { display: inline-flex; }</code></pre>
+						<p><small><b>inline-flex</b> no hace que los <b>flex items</b> se muestren en linea. Hace que <b>flex container</b> se visualice en linea. No hay ninguna diferencia en el efecto sobre los <b>flex items</b>.</small></p>
+					</section>
+					<section>
+						<h3>Flex item</h3>
+						<p>Cualquier elemento hijo en el interior del <b>flex container</b> se considera un <b>flex item</b>.</p>
+						<p>Cualquier texto dentro del elemento contenedor se envuelve automáticamente en un <b>flex item</b> anónimo.</p>
+					</section>
+					<section>
+						<h3>Axes</h3>
+						<p>Cada diseño de <b>flexbox</b> sigue dos ejes:</p>
+						<ul>
+							<li><b>Main axis</b>: Eje principal que tiene una orientación específica. Por defecto, es en horizontal (row).</li>
+							<li><b>Cross axis</b>: Eje secundario siempre perpendicular al eje principal.</li>
+						</ul>
+						<p><small>Si <b>main axis</b> es en horizontal, <b>cross axis</b> será en vertical, y viceversa.</small></p>
+					</section>
+					<section>
+						<h4>Flex-direction</h4>
+						<p>Establece el eje principal para que se oriente en horizontal (por defecto) o vertical.</p>
+						<table>
+							<thead>
+							<tr>
+								<td>Propiedad</td>
+								<td>Valor</td>
+								<td>Significado</td>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>flex-direction:</td>
+								<td>row | row-reverse | column | column-reverse</td>
+								<td>Cambia la orientación del eje principal.</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h4>Flex-wrap</h4>
+						<p>Los <b>Flex item</b> pueden disponerse en una sola o varias líneas de acuerdo con la propiedad, que controla la dirección del <b>Cross axis</b> y la dirección en la que las nuevas líneas se apilan.</p>
+						<table>
+							<thead>
+							<tr>
+								<td>Propiedad</td>
+								<td>Valor</td>
+								<td>Significado</td>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>flex-wrap:</td>
+								<td>nowrap | wrap | wrap-reverse</td>
+								<td>Evita o permite el desbordamiento (multilinea).</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h5>Valores de la propiedad Flex-wrap</h5>
+						<table>
+							<thead>
+							<tr>
+								<td>Valor</td>
+								<td>Descripción</td>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>nowrap (por defecto)</td>
+								<td>Establece los ítems en una sola línea (no permite que se desborde el contenedor).</td>
+							</tr>
+							<tr>
+								<td>wrap</td>
+								<td>Establece los ítems en modo multilínea (permite que se desborde el contenedor).</td>
+							</tr>
+							<tr>
+								<td>wrap-reverse</td>
+								<td>Establece los ítems en modo multilínea, pero en dirección inversa.</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h4>Flex-flow</h4>
+						<p>Atajo (short-hand) que tiene como función resumir los valores de las propiedades <b>flex-direction</b> y <b>flex-wrap</b></p>
+						<pre><code>.container {
+    display: flex;
+    /* flex-flow: [flex-direction] [flex-wrap] */
+    flex-flow: row wrap;
+}</code></pre>
+					</section>
+					<section>
+						<h4>Justify-content</h4>
+						<p>Tiene como función colocar los ítems de un contenedor mediante una disposición concreta a lo largo del eje principal.</p>
+						<table>
+							<thead>
+							<tr>
+								<td>Propiedad</td>
+								<td>Valor</td>
+								<td>Actúa sobre</td>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>justify-content:</td>
+								<td>flex-start | flex-end | center | space-between | space-around</td>
+								<td>Eje principal</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h5>Valores de la propiedad Justify-content</h5>
+						<table>
+							<thead>
+							<tr>
+								<td>Valor</td>
+								<td>Descripción</td>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>flex-start (por defecto)</td>
+								<td>Agrupa los ítems al principio del eje principal.</td>
+							</tr>
+							<tr>
+								<td>flex-end</td>
+								<td>Agrupa los ítems al final del eje principal.</td>
+							</tr>
+							<tr>
+								<td>center</td>
+								<td>Agrupa los ítems al centro del eje principal.</td>
+							</tr>
+							<tr>
+								<td>space-between</td>
+								<td>Distribuye los ítems dejando (el mismo) espacio entre ellos.</td>
+							</tr>
+							<tr>
+								<td>space-around</td>
+								<td>Distribuye los ítems dejando (el mismo) espacio a ambos lados de cada uno de ellos.</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/flex-box-justify-content.png" title="Flexbox justify-content" alt="Flexbox justify-content">
+					</section>
+					<section>
+						<h4>Align-items</h4>
+						<p>Determina el valor predeterminado de cómo se colocan los Flex items en el eje transversal en cada línea.</p>
+					</section>
+					<section>
+						<h4>Align-content</h4>
+						<p>La propiedad CSS <a rel="nofollow" href="https://developer.mozilla.org/es/docs/Web/CSS/align-content" target="_blank" title="align-content">align-content</a> ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.</p>
+					</section>
+					<section>
+						<h4>Align-self</h4>
+						<p>La propiedad CSS <a rel="nofollow" href="https://developer.mozilla.org/es/docs/Web/CSS/align-self" target="_blank" title="align-self">align-self</a> alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de align-items. Si el límite transversal de alguno de los elementos está definido como auto, el valor de align-self es ignorado.</p>
+					</section>
+				</section>
+
+				<!-- Game -->
+				<section>
+					<p class="h2">Flexbox Froggy</p>
+					<p>Un juego para aprender</p>
+					<p><a rel="nofollow" href="https://flexboxfroggy.com/#es" target="_blank" title="Flexbox Froggy">Jugar</a></p>
 				</section>
 
 				<!-- Thank you -->
 				<section>
-					<p class="h4">END!</p>
-					<p>Thank you very much!</p>
-					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/merci.gif" title="Thank you very much!" alt="Thank you very much!">
+					<p class="h4">¡FIN!</p>
+					<p>Simplemente, GRACIAS</p>
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/merci.gif" title="Gracias" alt="Gracias">
 				</section>
 			</div>
 		</div>
