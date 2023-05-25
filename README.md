@@ -1,13 +1,13 @@
-# Slides: Starter boilerplate
+# Slides: Flex box
 
-Short or long description.
+Presentation on flexbox the new property of CSS3.
 
 ## Environment
 
-- LOCAL: http://web.slidesstarter.lndo.site/
+- LOCAL: http://web.flexbox.lndo.site/
 - DEV: ~
 - PRE: ~
-- PRO: ~
+- PRO: https://jjpeleato.com/courses/flex-box/
 
 ## Project
 
@@ -64,7 +64,7 @@ For more information visit:
 4. For security. Open the `initialize.sh` file and edit the GIT variable to `~`.
 5. Open the `README.md` and rename the name of presentation, name of project and description.
 6. Open the `lando.yml` and rename the project and proxy name.
-7. Open the `package.json` and edit the name and description.
+7. Open the `package.json` and edit the name, description and Git uri.
 8. Open the `public/.well-known/security.txt` and edit the canonical.
 9. Open the `public/humans.txt` and edit the last update.
 10. Open your terminal and browse to the root location of your project.
